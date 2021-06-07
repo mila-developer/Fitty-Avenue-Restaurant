@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet"/>
+    <link rel = "stylesheet" href="style.css"/>
+    
+    <title>Fifty Avenue|Restaurant</title>
+
+    
+</head>
+<body onload = loadMenu()>
+    <header class= "header">
+        <nav class="nav">
+            <img 
+                src="imgs/logo1-1.png"
+                alt="Fifty Avenue logo"
+                class="nav__logo"
+                id="logo"
+                designer="Camila"
+                data-version-number="3.0" />
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a class="nav__link" href="index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#section--2">About</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#section--3">Menu</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#section--4">Contacts</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--btn btn--show-modal" href="#">Register user</a>
+                </li>
+                <li class="nav__item">
+                    <input
+                    type="text"
+                    placeholder="User"
+                    class="login_input login__input--user"/>
+                </li>
+                <li class="nav__item">
+                    <input
+                    type="password"
+                    placeholder="Password"
+                    maxlength="4"
+                    class="login_input login__input--pin"/>
+                </li>
+                <button onclick="LoginUser()" class="btn--login"> Login </button>
+                <button onclick="LogoutUser()" class="btn--logout"> Logout </button>
+            </ul>
+        </nav>
+
+        <div class="header__title">
+            <h1>
+                Welcome to Fifty Avenue
+            </h1>
+            <h4>
+                Good experience with good food.
+            </h4>
+            <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+            <img
+                src="imgs/banner.png"
+                class="header__img"
+                alt="Banner restaurant" />
+        </div>
+
+    </header>
+
+    <section class="section" id="section--1">
+        <div class="section__title">
+            <h3 class="section__header">
+                Everything you want in a restaurant and more.
+            </h3>
+        </div>
+        </section>
+
+        <section class="section" id="section--2">
+        <div class="section__title">
+            <h2 class="section__description">About</h2>
+            <h3 class="section__header">
+                Open from 8am to 10pm.
+            </h3>
+            <p>
+                Located in the heart of the Lisbon, it's not a just a restaurant.
+                It's an experience of sensation.
+            </p>
+        </div>
+        </section>
+
+        <section class="section" id="section--3">
+            <div class="section__title section__title--menu">
+                <h2 class="section__description">Menu</h2>
+                    <div id="menuList" class="container--menu">
+                    </div>
+                <div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="section--4">
+            <div class="setion__title">
+                <h2 class="section__description">Contacts</h2>
+                <h3 class="section__header">
+                </h3>
+                <p class="contact--text">
+                    <strong>E-mail</strong> fiftyavenue@restaurant.pt
+                </p>
+                <p class="contact--text">
+                    <strong>Phone</strong> +351 32560-3456
+                </p>
+                <p class="contact--text">
+                    <strong>Address</strong> Fifty avenue, 105 - Lisbon
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="section--reservation">
+            <div class="section__title section__title--reservation">
+                <h2 class="section__description">
+                    Make your reservation
+                </h2>
+                <!-- <div class="form--reservation" action="">
+                    <input class="form-input--reservation" type="text" data-form--input>
+                    <input type="datetime-local" placeholder="fill in 2021-02-23" data-form-date>
+                    <button class="form-button--reservation" data-form--button>New Reservation</button>
+                </div>
+                <ul class="list--reservation" data--list>
+
+                </ul>
+            </div> -->
+
+            <div id="section__title section__title--reservation">
+                <div id = "reservation">
+                <label for="day">Monday</label>
+                <select name="monday" id="Monday">
+                    <option value="None">None</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Fish">Fish</option>
+                </select>
+                <label for="day">Tuesday</label>
+                <select name="tuesday" id="Tuesday">
+                    <option value="None">None</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Fish">Fish</option>
+                </select>
+                <label for="day">Wednesday</label>
+                <select name="wednesday" id="Wednesday">
+                    <option value="None">None</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Fish">Fish</option>
+                </select>
+                <label for="day">Thursday</label>
+                <select name="tuesday" id="Thursday">
+                    <option value="None">None</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Fish">Fish</option>
+                </select>
+                <label for="day">Friday</label>
+                <select name="Friday" id="Friday">
+                    <option value="None">None</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Fish">Fish</option>
+                </select>
+                <button onclick="SelectReserv()" class="form-button--reservation" data-form--button>New Reservation</button>
+                <div id="list--reserv">
+
+                </div>
+            </div>
+            </div>
+        </section>           
+        </div>
+        
+
+<footer class="footer">
+    <ul class="footer__nav">
+        <li class="footer__item">
+            <a class="footer__link" href="index.html">Home</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#section--2">About</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#section--3">Menu</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Register</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#section--4">Contact us</a>
+        </li>
+    </ul>
+    <img src="imgs/rodape.png" alt="Logo" class="footer__logo"/>
+        <p class="footer__copyright">
+        &copy; Copyright by
+        <a
+        class="footer__link github-link"
+        target="_blank"
+        href="https://github.com/mila-developer"
+        >Camila Abreu</a>
+        </p>
+    </footer>
+
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+          register your account <br />
+          in just <span class="highlight">5 minutes</span>
+        </h2>
+        <div class="modal__form">
+          <label>Complete Name</label>
+          <input type="text" />
+          <label >User</label>
+          <input id="register_user" type="text" />
+          <label>Email Address</label>
+          <input  type="email" />
+          <label>Password</label>
+          <input id="register_pass" type="password" maxlength="4" />
+          <button onclick="RegisterBtn()" class="btn">Register &rarr;</button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+      <script defer src="script.js"></script>
+    </body>
+</html>
